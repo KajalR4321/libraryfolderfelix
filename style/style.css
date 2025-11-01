@@ -1,0 +1,10 @@
+@font-face{
+    font-family: "DMSerif";
+    src:url('../asserts/dmfont/DMSerifText-Regular.ttf') format('truetype')
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DMSerif",sans-serif;
+}
