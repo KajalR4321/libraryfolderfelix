@@ -35,11 +35,17 @@
   color: #ffd700; /* gold color on hover */
  
 }
-/* .img{
-    background-size:cover ;
-    background-repeat: no-repeat;
+/* ----- Hide Checkbox ----- */
+#menu-toggle{
+  display: none;
+}
+/* ----- Hamburger Icon(menu icon) ----- */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
 
-} */
  .form-section {
   background:url('../asserts/dmfont/libjpg.jpg') ;
    
@@ -59,13 +65,16 @@
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* 🌿 FORM CONTAINER */
+/*  FORM CONTAINER */
 .form-container {
-      background: linear-gradient(135deg, #967b04, #e96466);
+      /* background: linear-gradient(135deg, #967b04, #e96466); */
+      /* background-color: rgba(0, 0, 0, 0.2); */
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
   /* background: rgba(255, 255, 255, 0.98); */
   padding: 40px 45px;
   border-radius: 18px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.8);
   width: 420px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -125,3 +134,50 @@ button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
+@media screen and (width< 768px) {
+  .header{
+    /*home icon is in single line*/
+ flex-wrap: wrap;
+ padding: 15px 20px;
+}
+ .header h1{
+    font-size: 1.5rem;
+ }
+.menu-icon{
+  display: block;
+}
+/* when checked change nav position */
+#menu-toggle:checked ~ .nav{
+  /* background-color: black; */
+  top: 70px;
+}
+.nav{
+  /* display: none; */
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  background:rgba(255, 255, 255, 0.1) ;
+  /*it blur behind*/
+   backdrop-filter: blur(10px);
+   border-radius: 10px;
+   margin-top: 10px;
+   padding: 10px 0;
+ transition: all 0.4s ease-in-out;
+}
+.nav a {
+    margin: 10px 0;
+    display: block;
+  }
+   /* Show menu when checkbox is checked */
+  #menu-toggle:checked ~ .nav {
+    display: flex;
+  }
+ 
+}
+
+  
+
+
