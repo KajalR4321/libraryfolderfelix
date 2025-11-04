@@ -8,3 +8,120 @@
     box-sizing: border-box;
     font-family: "DMSerif",sans-serif;
 }
+
+.header{
+ background: linear-gradient(135deg, #4a90e2, #8e44ad); 
+ color: white;
+  display: flex;
+  justify-content: space-between; /* title left, nav right */
+  align-items: center;
+  padding: 15px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.header h1{
+    font-size: 2rem;
+    font-family: "poppins", sans-serif;
+    margin: 0;
+}
+.nav nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    font-style: 500;
+  
+}
+.nav nav a:hover {
+  color: #ffd700; /* gold color on hover */
+ 
+}
+/* .img{
+    background-size:cover ;
+    background-repeat: no-repeat;
+
+} */
+ .form-section {
+  background:url('../asserts/dmfont/libjpg.jpg') ;
+   
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 20px;
+}
+
+/* Form heading */
+.form-section h3 {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 35px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 🌿 FORM CONTAINER */
+.form-container {
+      background: linear-gradient(135deg, #967b04, #e96466);
+  /* background: rgba(255, 255, 255, 0.98); */
+  padding: 40px 45px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 420px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Label and Input styling */
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color:whitesmoke;
+  margin-bottom: 6px;
+  font-size: 15px;
+ font-family: "poppins", sans-serif;
+
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e6dede;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+}
+
+/*  BUTTON STYLING */
+button {
+  width: 100%;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
