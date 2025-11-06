@@ -4,12 +4,14 @@ import libraray from "./library.js";
  let libraray1= new libraray("Akshatlibrary");
 //  libraray1.addbook(book)
  console.log(libraray1);
+ //it will store in string form and convert in array and continously update 
+ libraray1.booklist =JSON.parse(localStorage.getItem("bookList"))|| [];
  //acces full form by this document element it target all html 
 const form=document.getElementById("form-section")
 //add event listener add it traget event 
-form.addEventListener("submit", addbook);
+form.addEventListener("submit", fetchData);
 
-function addbook(event){
+function fetchData(event){
     //page reload or data loose ho rha ta usko stop kar diya eventdefault ne
     event.preventDefault()
     console.log(event)
@@ -28,7 +30,16 @@ let book1 = new books(
      quantity,
      ISBN
     );
-    Mylib.addbook(book1);
+    libraray1.addbook(book1);
+    //set item use to add in booklist (booklist property hai)
+    localStorage.setItem("bookList", JSON.stringify(libraray1.booklist));
+    //this is basicaly use to show all in put data sabko ak sath empty out kare
+    for(let data of event.target){
+        console.log(data)
+        data.value=" ";
+        
+        
+    }
 
 
 
