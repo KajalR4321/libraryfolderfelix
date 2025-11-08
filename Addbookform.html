@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library Project</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+ 
+ <div class="header">
+    <h1>TUTORING LIBRARY.</h1>
+    <!---it takes 3line ayengi-->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <div class="nav">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Our Services</a>
+            <a href="#">Latest Collection</a>
+            
+            </nav>
+    </div>
+   </div>
+    
+  
+  <section class="form-section" id="form-section">
+    
+    <h3>Library Form</h3>
+ 
+    <div class="form-container">
+      <form>
+        <div class="form-group">
+          <label for="title">Book Title</label>
+          <input type="text" id="title" name="title" placeholder="Enter book title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="author">Author Name</label>
+          <input type="text" id="author" name="author" placeholder="Enter author name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="year">Published Year</label>
+          <input type="number" id="year" name="year" placeholder="e.g. 2024" min="1500" max="2025" required>
+        </div>
+
+        <div class="form-group">
+          <label for="publisher">Published By</label>
+          <input type="text" id="publisher" name="publisher" placeholder="Enter publisher name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter number of copies" min="1" required>
+        </div>
+        <div class="form-group">
+          <label for="Isbn">ISBN</label>
+          <input type="number" id="ISBN" name="ISBN" placeholder="Enter ISBN number" required>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+   
+ 
+    <script src="/script/App.js" type="module"></script>
+</body>
+</html>

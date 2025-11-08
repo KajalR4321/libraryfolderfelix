@@ -12,7 +12,7 @@ class libraray{
         }
         this.booklist.push(bk); 
         //this is add booklish in local storage(when i use this line my logic is wrong because when i fresh my page so previous data lost and start from 1)
-        // localStorage.setItem("bookList", JSON.stringify(this.books))
+       
         console.log("book added succesfully")
 
     }
