@@ -11,6 +11,7 @@ const renderBook = () => {
   No books avilable! Add some book
   </p>
   </div>`;
+  return;
   }
   //start from empty
   container.innerHTML=""
@@ -19,8 +20,11 @@ const renderBook = () => {
     //dought hai
     let div=document.createElement("div")
     div.classList="book_car_container"
+    //$ sign is take for assign variable and(` `) sign take for string when itake $ so use (``)
     div.innerHTML=`<div class="Book_card">
-      <h2>${bk}</h2>
+    
+      <h2>${bk.title}</h2>
+      <h3>${bk.author}</h3>
     </div>`
     //append insert item in last()
     container.appendChild(div);
