@@ -1,6 +1,6 @@
 //it acces root html for index.html
 const container = document.getElementById("root");
-const booklist = JSON.parse(localStorage.getItem("booklist"))||[];
+const booklist = JSON.parse(localStorage.getItem("bookList"))||[];
 console.log(booklist);
 //take render book only work to insert html make function
 const renderBook = () => {
@@ -19,13 +19,15 @@ const renderBook = () => {
   booklist.forEach((bk) => {
     //dought hai
     let div=document.createElement("div")
-    div.classList="book_car_container"
+    div.classList="book_card_container"
     //$ sign is take for assign variable and(` `) sign take for string when itake $ so use (``)
-    div.innerHTML=`<div class="Book_card">
+    div.innerHTML=`<div class="book_container">
+    <div class="book">
     
       <h2>${bk.title}</h2>
       <h3>${bk.author}</h3>
-    </div>`
+      </div>
+    </div>`;
     //append insert item in last()
     container.appendChild(div);
     
